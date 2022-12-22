@@ -1,0 +1,4 @@
+# Ürün Listesinde <brand> Marka Değerine Göre Filtreleme Yapılır
+* <brand> marka filtresi değeri için arama yapılır
+* <brand> marka filtresine göre filtreleme işlemi yapılır
+* <brand> marka filtresinin seçilmiş olduğu kontrol edilir
