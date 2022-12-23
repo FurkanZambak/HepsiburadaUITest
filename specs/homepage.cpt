@@ -2,6 +2,7 @@
 * Anasayfa açılır
 * Sayfa url değerinin valid olduğu kontrol edilir
 * Logonun sayfada göründüğü kontrol edilir
+* Cookies için Kabul Et butonuna tıklanır
 
 # Kategori Menüsünden Bir Kategori Seçimi(<mainCategory> => <subCategory> => <category>) Yapılır
 * Header alanında <mainCategory> kategorisinin üzerine hover işlemi yapılır
