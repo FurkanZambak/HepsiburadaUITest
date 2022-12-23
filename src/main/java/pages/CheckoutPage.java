@@ -19,6 +19,12 @@ public class CheckoutPage extends BasePage {
     @FindBy(id = "continue_step_btn")
     private WebElement continueShoppingBut;
 
+    @FindBy(css = "[name = 'quantity']")
+    private WebElement quantityInput;
+
+    @FindBy(xpath = "//h1[text() = 'Sepetim']")
+    private WebElement myBasketHeader;
+
     public String getProductName() {
         return waitElementToBeVisible(this.productNameField).getText();
     }
@@ -29,5 +35,13 @@ public class CheckoutPage extends BasePage {
 
     public void clickContinueShoppingBut() {
         this.continueShoppingBut.click();
+    }
+
+    public String getProductQuantityValue() {
+        return this.quantityInput.getAttribute("value");
+    }
+
+    public boolean checkMyBasketHeaderIsVisible() {
+        return waitElementToBeVisible(this.myBasketHeader).isDisplayed();
     }
 }
