@@ -15,6 +15,7 @@ public class PropertyManager {
     private static String appURL;
     private static int implicitWaitDuration;
     private static String dataFilePath;
+    private static int ajaxLoadWaitLimit;
 
     public static PropertyManager getInstance() {
         if(propertyInstance == null) {
@@ -43,6 +44,7 @@ public class PropertyManager {
         appURL = property.getProperty("AppURL");
         implicitWaitDuration = Integer.parseInt(property.getProperty("ImplicitWaitDuration"));
         dataFilePath = property.getProperty("DataFilePath");
+        ajaxLoadWaitLimit = Integer.parseInt(property.getProperty("AjaxLoadWaitLimit"));
     }
 
     public String getBrowserType() {
@@ -59,5 +61,9 @@ public class PropertyManager {
 
     public String getDataFilePath() {
         return dataFilePath;
+    }
+
+    public int getAjaxLoadWaitLimit() {
+        return ajaxLoadWaitLimit;
     }
 }
