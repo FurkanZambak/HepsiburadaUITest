@@ -15,11 +15,8 @@ public class HomePage extends BasePage {
     @FindBy(xpath = "//div[contains(@id, 'NavigationDesktop')]")
     private WebElement categoryDiv;
 
-    @FindBy(xpath = "//input[@placeholder = 'Ürün, kategori veya marka ara']")
-    private WebElement searchInput;
-
-    @FindBy(xpath = "//div[text() = 'ARA']")
-    private WebElement searchBut;
+    @FindBy(id = "onetrust-accept-btn-handler")
+    private WebElement acceptCookiesBut;
 
 
     public boolean checkLogoVisibility() {
@@ -46,8 +43,7 @@ public class HomePage extends BasePage {
         Click(waitElementToBeClickable(element.findElement(By.xpath("./.."))));
     }
 
-    public void searchProduct(String productName) {
-        this.searchInput.sendKeys(productName);
-        this.searchBut.click();
+    public void clickAcceptCookiesBut() {
+        this.acceptCookiesBut.click();
     }
 }
