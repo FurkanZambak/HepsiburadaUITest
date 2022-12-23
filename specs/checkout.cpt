@@ -1,0 +1,6 @@
+# Eklenen Ürünün Sepet Ekranında Kontrol Edilmesi
+* Sepete git butonuna tıklanır
+* Sayfadaki ajax çağrıları tamamlanıncaya kadar beklenilir
+* Sepetim header alanının sayfada gözüktüğünün kontrolü
+* Sepetteki ürünün verileri ile dosyadaki veriler karşılaştırılır
+* Alışverişi tamamla butonuna tıklanır
