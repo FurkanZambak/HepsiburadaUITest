@@ -53,4 +53,8 @@ public class BasePage {
         Actions action = new Actions(driver);
         action.moveToElement(element).perform();
     }
+
+    public void refreshPage() {
+        driver.navigate().refresh();
+    }
 }
