@@ -38,5 +38,9 @@ public class HomePageSteps extends BaseTest {
         homePage.clickCategory(category);
     }
 
+    @Step("Cookies için Kabul Et butonuna tıklanır")
+    public void clickAcceptCookiesBut() {
+        homePage.clickAcceptCookiesBut();
+    }
 
 }
