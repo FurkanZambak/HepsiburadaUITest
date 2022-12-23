@@ -52,7 +52,7 @@ public class ProductDetailPage extends BasePage {
     }
 
     public boolean checkProductInBasketTxtIsVisible() {
-        return waitElementToBeVisible(this.productInBasketTxt).isDisplayed();
+        return waitElementToBeVisible(this.productInBasketTxt, 15).isDisplayed();
     }
 
     public void clickGoToCartBut() {
