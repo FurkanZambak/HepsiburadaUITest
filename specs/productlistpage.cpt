@@ -2,3 +2,14 @@
 * <brand> marka filtresi değeri için arama yapılır
 * <brand> marka filtresine göre filtreleme işlemi yapılır
 * <brand> marka filtresinin seçilmiş olduğu kontrol edilir
+* Sayfadaki title elementinin içeriğinde <brand> yazısının görülmesi
+
+# Ürün Listesinde <sortingType> Değerine Göre Sıralama Yapılır
+* Hızlı teslim tooltip kapatılır
+* Sıralama listesine tıklanır
+* Sıralama listesinden <sortingType> değeri seçilir
+* Sıralama listesine tıklanır
+* Sıralama listesinde <sortingType> değerinin seçilmiş olduğunun görülmesi
+
+# Ürün Listesinde <no> Numaralı Ürünün Seçilmesi
+* Ürün listesinden <no> numaralı ürünün seçilmesi
