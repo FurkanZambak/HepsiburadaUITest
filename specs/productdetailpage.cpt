@@ -1,0 +1,7 @@
+# Ürünün Sepete Başarılı Bir Şekilde Eklenmesi
+* "2" nolu tab ekranına geçiş yapılır
+* Ürün detayı sayfasının açıldığının kontrolü
+* Ürün detayının dosyaya yazılması
+* Sepete Ekle butonuna tıklanır
+* Ürün sepetinizde textinin görünür olduğunun kontrol edilmesi
+* Ürün detayı dosyadan okunarak modal ekranda karşılaştırılır
