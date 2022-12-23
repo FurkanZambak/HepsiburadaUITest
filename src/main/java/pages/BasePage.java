@@ -5,11 +5,12 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.PageFactory;
+import org.openqa.selenium.support.ui.ExpectedCondition;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
-
+import util.PropertyManager;
 import java.time.Duration;
-import java.util.ArrayList;
+
 
 public class BasePage {
     protected WebDriver driver;
@@ -35,11 +36,6 @@ public class BasePage {
         return waitElementToBeVisible(element, 5);
     }
 
-    public void switchToNewTab(int tab) {
-        ArrayList<String> tabs_windows = new ArrayList<String> (driver.getWindowHandles());
-        driver.switchTo().window(tabs_windows.get(tab));
-    }
-
     public void scrollIntoView(WebElement element) {
         JavascriptExecutor jse = (JavascriptExecutor)driver;
         jse.executeScript("arguments[0].scrollIntoView(true);", element);
@@ -54,7 +50,24 @@ public class BasePage {
         action.moveToElement(element).perform();
     }
 
-    public void refreshPage() {
-        driver.navigate().refresh();
+    public void waitForAjaxLoad() {
+        int waitTime = PropertyManager.getInstance().getAjaxLoadWaitLimit();
+        int count = 0;
+        WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(waitTime));
+        wait.until((ExpectedCondition<Boolean>) wd -> ((JavascriptExecutor) wd).executeScript("return document.readyState").equals("complete"));
+
+        if((Boolean) ((JavascriptExecutor) driver).executeScript("return window.jQuery != null"))
+        {
+            while(!(Boolean) ((JavascriptExecutor) driver).executeScript("return jQuery.active == 0"))
+            {
+                try {
+                    Thread.sleep(4000);
+                }
+                catch (InterruptedException e) {
+                    e.printStackTrace();
+                }
+                if(count > 4) break; count++;
+            }
+        }
     }
 }
