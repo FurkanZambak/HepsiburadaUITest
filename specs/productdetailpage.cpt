@@ -1,5 +1,6 @@
 # Ürünün Sepete Başarılı Bir Şekilde Eklenmesi
 * "2" nolu tab ekranına geçiş yapılır
+* Sayfadaki ajax çağrıları tamamlanıncaya kadar beklenilir
 * Ürün detayı sayfasının açıldığının kontrolü
 * Ürün detayının dosyaya yazılması
 * Sepete Ekle butonuna tıklanır
