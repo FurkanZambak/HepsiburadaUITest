@@ -10,10 +10,9 @@ public class DataOps {
         try {
             Path fileName = Path.of(PropertyManager.getInstance().getDataFilePath());
             Files.writeString(fileName, text);
-            //log.info("Txt dosyaya yazma işlemi başarılı");
         }
         catch (IOException e) {
-            //log.error("Txt dosya yazma işleminde hata", e.getMessage());
+            e.printStackTrace();
         }
     }
 
@@ -22,10 +21,9 @@ public class DataOps {
         try {
             Path fileName = Path.of(PropertyManager.getInstance().getDataFilePath());
             fileString = Files.readString(fileName);
-            //log.info("Txt dosya okuma işlemi başarılı");
         }
         catch (IOException e) {
-            //log.error("Txt dosya okuma işleminde hata var", e.getMessage());
+            e.printStackTrace();
         }
         return fileString;
     }
