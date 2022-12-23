@@ -34,7 +34,8 @@ public class ProductListPage extends BasePage {
 
 
     public void typeFilterInput(String brand) {
-        scrollIntoView(this.filterInput);
+        scrollIntoView(this.sortingDropdown);
+        waitElementToBeVisible(this.closeTooltipField);
         this.filterInput.click();
         this.filterInput.sendKeys(brand);
     }
@@ -45,7 +46,6 @@ public class ProductListPage extends BasePage {
 
     public void checkBrandCheckbox(String brand) {
         getBrandCheckboxInput(brand).click();
-        refreshPage();
     }
 
     public boolean checkBrandCheckboxIsChecked(String brand) {
