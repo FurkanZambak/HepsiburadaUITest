@@ -1,5 +1,6 @@
 # Uygulama Anasayfasının Açılması
 * Anasayfa açılır
+* Sayfadaki ajax çağrıları tamamlanıncaya kadar beklenilir
 * Sayfa url değerinin valid olduğu kontrol edilir
 * Logonun sayfada göründüğü kontrol edilir
 * Cookies için Kabul Et butonuna tıklanır

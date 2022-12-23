@@ -42,5 +42,4 @@ public class HomePageSteps extends BaseTest {
     public void clickAcceptCookiesBut() {
         homePage.clickAcceptCookiesBut();
     }
-
 }
