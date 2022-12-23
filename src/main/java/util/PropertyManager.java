@@ -14,6 +14,7 @@ public class PropertyManager {
     private static String browserType;
     private static String appURL;
     private static int implicitWaitDuration;
+    private static String dataFilePath;
 
     public static PropertyManager getInstance() {
         if(propertyInstance == null) {
@@ -41,6 +42,7 @@ public class PropertyManager {
         browserType = property.getProperty("BrowserType");
         appURL = property.getProperty("AppURL");
         implicitWaitDuration = Integer.parseInt(property.getProperty("ImplicitWaitDuration"));
+        dataFilePath = property.getProperty("DataFilePath");
     }
 
     public String getBrowserType() {
@@ -53,5 +55,9 @@ public class PropertyManager {
 
     public int getImplicitWaitDuration() {
         return implicitWaitDuration;
+    }
+
+    public String getDataFilePath() {
+        return dataFilePath;
     }
 }
