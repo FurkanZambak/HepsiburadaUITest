@@ -1,0 +1,4 @@
+# Login Sayfasının Aktif Olduğunun Kontrolü
+* Sayfadaki ajax çağrıları tamamlanıncaya kadar beklenilir
+* Giriş sayfasındaki elementlerin görünür olduklarının kontrol edilmesi
+* Sayfa url değerinin kontrol edilmesi
