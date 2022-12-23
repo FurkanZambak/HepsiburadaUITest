@@ -1,6 +1,9 @@
 # Ürün Listesinde <brand> Marka Değerine Göre Filtreleme Yapılır
+* Sayfadaki ajax çağrıları tamamlanıncaya kadar beklenilir
 * <brand> marka filtresi değeri için arama yapılır
 * <brand> marka filtresine göre filtreleme işlemi yapılır
+* Sayfada refresh işlemi uygulanır
+* Sayfadaki ajax çağrıları tamamlanıncaya kadar beklenilir
 * <brand> marka filtresinin seçilmiş olduğu kontrol edilir
 * Sayfadaki title elementinin içeriğinde <brand> yazısının görülmesi
 
