@@ -1,19 +1,11 @@
 import com.thoughtworks.gauge.Step;
 import pages.ProductDetailPage;
 import util.DataOps;
-
-import java.util.ArrayList;
 import static org.junit.jupiter.api.Assertions.*;
 
 public class ProductDetailSteps extends BaseTest {
 
     ProductDetailPage productDetailPage = new ProductDetailPage(driver);
-
-    @Step("<tabNo> nolu tab ekranına geçiş yapılır")
-    public void switchToTab(String tabNo) {
-        ArrayList<String> tabs_windows = new ArrayList<String> (driver.getWindowHandles());
-        driver.switchTo().window(tabs_windows.get(Integer.parseInt(tabNo) - 1));
-    }
 
     @Step("Ürün detayı sayfasının açıldığının kontrolü")
     public void shouldProductDetailPageOpened() {
@@ -29,7 +21,7 @@ public class ProductDetailSteps extends BaseTest {
     }
 
     @Step("Sepete Ekle butonuna tıklanır")
-    public void clickAddToCartButton() {
+    public void clickAddToCartButton()  {
         productDetailPage.clickAddToCartBut();
     }
 
